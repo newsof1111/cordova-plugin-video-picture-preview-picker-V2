@@ -1,4 +1,4 @@
-package com.sofienmediaselector;
+package com.sofienvppp2;
 
 import android.app.Activity;
 import android.app.AlertDialog;

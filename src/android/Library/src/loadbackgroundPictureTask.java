@@ -1,4 +1,4 @@
-package com.sofienmediaselector;
+package com.sofienvppp2;
 
 import android.content.Context;
 import android.graphics.Bitmap;

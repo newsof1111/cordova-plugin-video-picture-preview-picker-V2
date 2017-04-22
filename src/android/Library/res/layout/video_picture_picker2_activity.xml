@@ -6,7 +6,7 @@
     android:background="@color/White"
     android:gravity="center|fill"
     android:orientation="vertical"
-    tools:context="com.sofienmediaselector.VideoPicturePickerActivity"
+    tools:context="com.sofienvppp2.VideoPicturePickerActivity"
     tools:ignore="MergeRootFrame">
 
     <LinearLayout
@@ -47,7 +47,7 @@
             android:orientation="vertical">
 
 
-            <com.sofienmediaselector.TouchImageView
+            <com.sofienvppp2.TouchImageView
                 android:id="@+id/imageView1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

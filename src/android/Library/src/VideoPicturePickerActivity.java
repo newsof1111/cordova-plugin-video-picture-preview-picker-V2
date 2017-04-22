@@ -1,11 +1,11 @@
-package com.sofienmediaselector;
+package com.sofienvppp2;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
-import com.sofienmediaselector.loadbackgroundPictureTask;
-import com.sofienmediaselector.DeviceImageVideoGridviewAdapter;
-import com.sofienmediaselector.ImageOrVideoItem;
+import com.sofienvppp2.loadbackgroundPictureTask;
+import com.sofienvppp2.DeviceImageVideoGridviewAdapter;
+import com.sofienvppp2.ImageOrVideoItem;
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;

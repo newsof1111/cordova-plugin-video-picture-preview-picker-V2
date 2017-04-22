@@ -1,4 +1,4 @@
-package com.sofienmediaselector;
+package com.sofienvppp2;
 
 import android.annotation.TargetApi;
 import android.content.Context;

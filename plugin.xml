@@ -25,17 +25,17 @@
 	<platform name="android">
 		<config-file target="res/xml/config.xml" parent="/*">
 			<feature name="VideoPicturePreviewPickerV2">
-				<param name="android-package" value="com.sofienmediaselector.VideoPicturePreviewPickerV2"/>
+				<param name="android-package" value="com.sofienvppp2.VideoPicturePreviewPickerV2"/>
 			</feature>
 		</config-file>
     <source-file src="android-support-v4.jar" target-dir="libs" />
 
 		<config-file target="AndroidManifest.xml" parent="/manifest/application">
 
-			<activity android:label="@string/multi_app_name" android:name="com.sofienmediaselector.VideoPicturePickerActivity" android:theme="@android:style/Theme.Holo.Light">
+			<activity android:label="@string/multi_app_name" android:name="com.sofienvppp2.VideoPicturePickerActivity" android:theme="@android:style/Theme.Holo.Light">
             </activity>
             <activity
-                android:name="com.sofienmediaselector.GettingPermissionsActivity"></activity>
+                android:name="com.sofienvppp2.GettingPermissionsActivity"></activity>
 		</config-file>
 
 		<config-file target="AndroidManifest.xml" parent="/manifest">
@@ -47,16 +47,16 @@
 		</config-file>
 		<framework src="src/android/photoviewer.gradle" custom="true" type="gradleReference" />
 
-		<source-file src="src/android/com/sofienmediaselector/VideoPicturePreviewPicker/VideoPicturePreviewPickerV2.java" target-dir="src/com/sofienmediaselector" />
-        <source-file src="src/android/com/sofienmediaselector/VideoPicturePreviewPicker/GettingPermissionsActivity.java" target-dir="src/com/sofienmediaselector" />
-		<source-file src="src/android/com/sofienmediaselector/VideoPicturePreviewPicker/FakeR.java" target-dir="src/com/sofienmediaselector" />
+		<source-file src="src/android/com/sofienvppp2/VideoPicturePreviewPicker/VideoPicturePreviewPickerV2.java" target-dir="src/com/sofienvppp2" />
+        <source-file src="src/android/com/sofienvppp2/VideoPicturePreviewPicker/GettingPermissionsActivity.java" target-dir="src/com/sofienvppp2" />
+		<source-file src="src/android/com/sofienvppp2/VideoPicturePreviewPicker/FakeR.java" target-dir="src/com/sofienvppp2" />
 
 
-		<source-file src="src/android/Library/src/DeviceImageVideoGridviewAdapter.java" target-dir="src/com/sofienmediaselector"/>
-		<source-file src="src/android/Library/src/ImageOrVideoItem.java" target-dir="src/com/sofienmediaselector"/>
-		<source-file src="src/android/Library/src/VideoPicturePickerActivity.java" target-dir="src/com/sofienmediaselector"/>
-		<source-file src="src/android/Library/src/TouchImageView.java" target-dir="src/com/sofienmediaselector"/>
-		<source-file src="src/android/Library/src/loadbackgroundPictureTask.java" target-dir="src/com/sofienmediaselector"/>
+		<source-file src="src/android/Library/src/DeviceImageVideoGridviewAdapter.java" target-dir="src/com/sofienvppp2"/>
+		<source-file src="src/android/Library/src/ImageOrVideoItem.java" target-dir="src/com/sofienvppp2"/>
+		<source-file src="src/android/Library/src/VideoPicturePickerActivity.java" target-dir="src/com/sofienvppp2"/>
+		<source-file src="src/android/Library/src/TouchImageView.java" target-dir="src/com/sofienvppp2"/>
+		<source-file src="src/android/Library/src/loadbackgroundPictureTask.java" target-dir="src/com/sofienvppp2"/>
 
 		
 		<source-file src="src/android/Library/res/values/videoPicturePreview_String.xml" target-dir="res/values"/>

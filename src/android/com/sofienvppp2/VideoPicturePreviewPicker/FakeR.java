@@ -11,7 +11,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 Code taken from: https://github.com/wildabeast/BarcodeScanner
 */
-package com.sofienmediaselector;
+package com.sofienvppp2;
 
 import android.app.Activity;
 import android.content.Context;

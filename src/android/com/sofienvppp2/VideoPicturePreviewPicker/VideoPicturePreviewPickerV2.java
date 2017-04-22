@@ -1,7 +1,7 @@
 /**
  * An Image Picker Plugin for Cordova/PhoneGap.
  */
-package com.sofienmediaselector;
+package com.sofienvppp2;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -20,7 +20,7 @@ import android.content.Context;
 import android.util.Log;
 
 
-import com.sofienmediaselector.ImageOrVideoItem;
+import com.sofienvppp2.ImageOrVideoItem;
 import android.app.Activity;
 import android.database.Cursor;
 import android.graphics.Bitmap;
