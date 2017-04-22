@@ -414,22 +414,8 @@ public class VideoPicturePickerActivity extends Activity
 		imageVideoContainer.setBackgroundDrawable(null);
 		imagePreview.setImageBitmap(null);
         imagePreview.setVisibility(View.GONE);
-        ObjectAnimator anim = ObjectAnimator.ofInt(imageVideoContainerParent, "height", imageVideoContainerParent.getMeasuredHeight(), 0);
-        anim.setDuration(0);
-        anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(final ValueAnimator animation) {
-                int val = (Integer) animation.getAnimatedValue();
-                ViewGroup.LayoutParams layoutParams = imageVideoContainerParent.getLayoutParams();
-                layoutParams.height = val;
-                imageVideoContainerParent.setLayoutParams(layoutParams);
-
-            }
-        });
-
-        anim.start();
-        ObjectAnimator anim3 = ObjectAnimator.ofInt(DeviceImageVideoGridview, "height", DeviceImageVideoGridview.getMeasuredHeight(), screenheight - (140 + 100));
-        anim3.setDuration(0);
+        final  ObjectAnimator anim3 = ObjectAnimator.ofInt(DeviceImageVideoGridview, "height", DeviceImageVideoGridview.getMeasuredHeight(), screenheight - (140 + 100));
+        anim3.setDuration(50);
         anim3.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(final ValueAnimator animation) {
@@ -446,8 +432,26 @@ public class VideoPicturePickerActivity extends Activity
             public void onAnimationStart(final Animator animation) {}
 
             @Override
-            public void onAnimationEnd(final Animator animation) {
+            public void onAnimationEnd(final Animator animation) {}
+        });
 
+        ObjectAnimator anim = ObjectAnimator.ofInt(imageVideoContainerParent, "height", imageVideoContainerParent.getMeasuredHeight(), 0);
+        anim.setDuration(50);
+        anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(final ValueAnimator animation) {
+                int val = (Integer) animation.getAnimatedValue();
+                ViewGroup.LayoutParams layoutParams = imageVideoContainerParent.getLayoutParams();
+                layoutParams.height = val;
+                imageVideoContainerParent.setLayoutParams(layoutParams);
+
+            }
+        });
+         anim.addListener(new Animator.AnimatorListener() {
+            public void onAnimationCancel(final Animator animation) {}
+            public void onAnimationRepeat(final Animator animation) {}
+            public void onAnimationStart(final Animator animation) {anim3.start();}
+            public void onAnimationEnd(final Animator animation) {
                 showed = false;
                 //	DeviceImageVideoGridview
                 if (selectedElement > -1)
@@ -466,12 +470,11 @@ public class VideoPicturePickerActivity extends Activity
                 videoPreview.stopPlayback();
                 source.setText("");
                 description.setText("");
-
-
             }
         });
-
-        anim3.start();
+        anim.start();
+       
+        
 
 
     }
