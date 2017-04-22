@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="discard">stornieren</string>
+    <string name="done">erledigt</string>
+    <string name="from">Von</string>
+    <string name="limitMultiselect">Sie erreichen die Grenze</string>
+    <string name="noSelection">Wählen Sie zuerst ein Element aus</string>
+    <string name="AlreadyAdded">bereits hinzugefügt</string>
+</resources>
+

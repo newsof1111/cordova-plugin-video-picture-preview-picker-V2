@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  id="cordova-plugin-video-picture-preview-picker-V2"
+  version="1.1.1">
+
+	<name>VideoPicturePreviewPickerV2</name>
+
+	<description>
+		This plugin allows selection of  image(s)/videos(s) with a smart preview  in a cordova app
+	</description>
+
+	<license>MIT</license>
+
+	<engines>
+		<engine name="cordova" version=">=3.0.0" />
+	</engines>
+
+	<js-module src="www/VideoPicturePreviewPickerV2.js" name="VideoPicturePreviewPickerV2">
+		<clobbers target="plugins.VideoPicturePreviewPickerV2" />
+	</js-module>
+
+	 
+	<!-- android -->
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="VideoPicturePreviewPickerV2">
+				<param name="android-package" value="com.sofienmediaselector.VideoPicturePreviewPickerV2"/>
+			</feature>
+		</config-file>
+    <source-file src="android-support-v4.jar" target-dir="libs" />
+
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+
+			<activity android:label="@string/multi_app_name" android:name="com.sofienmediaselector.VideoPicturePickerActivity" android:theme="@android:style/Theme.Holo.Light">
+            </activity>
+            <activity
+                android:name="com.sofienmediaselector.GettingPermissionsActivity"></activity>
+		</config-file>
+
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+		    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.VIBRATE" />
+			
+			
+		</config-file>
+		<framework src="src/android/photoviewer.gradle" custom="true" type="gradleReference" />
+
+		<source-file src="src/android/com/sofienmediaselector/VideoPicturePreviewPicker/VideoPicturePreviewPickerV2.java" target-dir="src/com/sofienmediaselector" />
+        <source-file src="src/android/com/sofienmediaselector/VideoPicturePreviewPicker/GettingPermissionsActivity.java" target-dir="src/com/sofienmediaselector" />
+		<source-file src="src/android/com/sofienmediaselector/VideoPicturePreviewPicker/FakeR.java" target-dir="src/com/sofienmediaselector" />
+
+
+		<source-file src="src/android/Library/src/DeviceImageVideoGridviewAdapter.java" target-dir="src/com/sofienmediaselector"/>
+		<source-file src="src/android/Library/src/ImageOrVideoItem.java" target-dir="src/com/sofienmediaselector"/>
+		<source-file src="src/android/Library/src/VideoPicturePickerActivity.java" target-dir="src/com/sofienmediaselector"/>
+		<source-file src="src/android/Library/src/TouchImageView.java" target-dir="src/com/sofienmediaselector"/>
+		<source-file src="src/android/Library/src/loadbackgroundPictureTask.java" target-dir="src/com/sofienmediaselector"/>
+
+		
+		<source-file src="src/android/Library/res/values/videoPicturePreview_String.xml" target-dir="res/values"/>
+		<source-file src="src/android/Library/res/values/colors.xml" target-dir="res/values"/>
+
+		<source-file src="src/android/Library/res/layout/actionbar_discard_button.xml" target-dir="res/layout"/>
+		<source-file src="src/android/Library/res/layout/actionbar_done_button.xml" target-dir="res/layout"/>
+		<source-file src="src/android/Library/res/layout/video_picture_picker2_activity.xml" target-dir="res/layout"/>
+		<source-file src="src/android/Library/res/layout/simple_list_item_1.xml" target-dir="res/layout"/>
+		<source-file src="src/android/Library/res/layout/actionbar_add.xml" target-dir="res/layout"/>
+
+
+
+		<source-file src="src/android/Library/res/drawable/backgrounddefault.jpg" target-dir="res/drawable"/>
+		<source-file src="src/android/Library/res/drawable/fullscreen.png" target-dir="res/drawable"/>
+		<source-file src="src/android/Library/res/drawable/ic_action_discard_light.png" target-dir="res/drawable"/>
+		<source-file src="src/android/Library/res/drawable/ic_action_done_light.png" target-dir="res/drawable"/>
+		<source-file src="src/android/Library/res/drawable/inversefull.png" target-dir="res/drawable"/>
+		<source-file src="src/android/Library/res/drawable/preview3.png" target-dir="res/drawable"/>
+		<source-file src="src/android/Library/res/drawable/selected.png" target-dir="res/drawable"/>
+		<source-file src="src/android/Library/res/drawable/selected_not.png" target-dir="res/drawable"/>
+		
+
+		<source-file src="src/android/Library/res/values-de/videoPicturePreview_String.xml" target-dir="res/values-de"/>
+		<source-file src="src/android/Library/res/values-fr/videoPicturePreview_String.xml" target-dir="res/values-fr"/>
+	</platform>
+</plugin>

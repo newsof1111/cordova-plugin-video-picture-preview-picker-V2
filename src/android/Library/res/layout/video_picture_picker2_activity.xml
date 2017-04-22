@@ -1,0 +1,182 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:gravity="center|fill"
+    android:orientation="vertical"
+    tools:context="com.sofienmediaselector.VideoPicturePickerActivity"
+    tools:ignore="MergeRootFrame">
+
+    <LinearLayout
+        android:id="@+id/controlHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="140px"
+        android:layout_marginLeft="0dp"
+        android:background="@color/Snow"
+        android:orientation="horizontal">
+
+        <include layout="@layout/actionbar_discard_button" />
+
+        <include layout="@layout/actionbar_done_button" />
+
+        <include layout="@layout/actionbar_add" />
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/imageVideoContainerParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/White"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/imageVideoContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="50px"
+            android:layout_gravity="center_vertical"
+            android:animateLayoutChanges="false"
+            android:animationCache="false"
+            android:background="@drawable/backgrounddefault"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical">
+
+
+            <com.sofienmediaselector.TouchImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:baselineAlignBottom="false"
+                android:cropToPadding="false"
+                android:gravity="center"
+                android:overScrollMode="always"
+                android:scaleType="matrix"
+                android:scrollbarAlwaysDrawHorizontalTrack="false"
+                android:visibility="visible" />
+
+            <VideoView
+                android:id="@+id/videoView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@android:color/white" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="false"
+            android:baselineAlignBottom="false"
+            android:layout_marginTop="5dp"
+            android:cropToPadding="true"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp"
+            android:scaleType="fitXY"
+            android:textAlignment="gravity"
+            android:src="@drawable/fullscreen"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageVideoContainer"
+            android:layout_alignParentLeft="false"
+            android:layout_centerInParent="false"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            android:alpha="0.9"
+            android:background="@color/Black"
+            android:textColor="@color/White"
+            android:baselineAlignBottom="false"
+            android:cropToPadding="false"
+            android:paddingRight="1dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="description" />
+
+        <TextView
+            android:id="@+id/source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/description"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="false"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            android:alpha="0.9"
+            android:textColor="@color/White"
+            android:background="@color/Black"
+            android:baselineAlignBottom="false"
+            android:cropToPadding="false"
+            android:fontFamily="sans-serif-smallcaps"
+            android:paddingRight="1dp"
+            android:text="source" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/Silver"
+        android:orientation="vertical">
+
+        <GridView
+            android:id="@+id/gridView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/White"
+            android:gravity="fill_vertical"
+            android:horizontalSpacing="2dp"
+            android:numColumns="4"
+            android:verticalSpacing="2dp">
+
+        </GridView>
+
+        <LinearLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:animateLayoutChanges="false"
+            android:orientation="vertical"
+            android:padding="1dp">
+
+            <HorizontalScrollView
+                android:id="@+id/HorizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <GridView
+                        android:id="@+id/gridView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </GridView>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

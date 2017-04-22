@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="multi_app_name">MultiImageChooser</string>
+    <string name="discard">Cancel</string>
+    <string name="done">Done</string>
+    <string name="from">From</string>
+    <string name="limitMultiselect">You have reached the limit of selected items</string>
+    <string name="noSelection">Select an Element First</string>
+    <string name="AlreadyAdded">Already Added</string>
+</resources>
