@@ -3,7 +3,7 @@
 
 Cordova  plugin allows selection of  image(s)/videos(s) with a smart preview  in a cordova app - implemented for Android 4.0 and above.
 
- here: [Demo](http://80.241.214.164/Cordovapicker/preview.html).
+ here: [Demo](https://www.youtube.com/watch?v=O9do9XmMBvQ).
 ## OUTPUT
 ![](http://80.241.214.164/Cordovapicker/output.png)
 
