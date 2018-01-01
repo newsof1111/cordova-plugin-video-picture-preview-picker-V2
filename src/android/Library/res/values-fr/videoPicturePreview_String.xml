@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
         <string name="multi_app_name">MultiImageChooser</string>
-        <string name="discard">Annuler</string>
-        <string name="done">Valider</string>
-        <string name="from">Depuis</string>
-        <string name="limitMultiselect">vous avez dépassé la limite  des pièces jointes</string>
-        <string name="noSelection">S\'il vous plaît,Sélectionnez un élément d\'abord </string>
-        <string name="AlreadyAdded">Déja Ajouté </string>
+        <string name="vpp_discard">Annuler</string>
+        <string name="vpp_done">Valider</string>
+        <string name="vpp_from">Depuis</string>
+        <string name="vpp_limitMultiselect">vous avez dépassé la limite  des pièces jointes</string>
+        <string name="vpp_noSelection">S\'il vous plaît,Sélectionnez un élément d\'abord </string>
+        <string name="vpp_AlreadyAdded">Déja Ajouté </string>
 </resources>
 

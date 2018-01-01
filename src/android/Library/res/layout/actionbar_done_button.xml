@@ -15,7 +15,7 @@
         android:drawablePadding="8dp"
         android:gravity="center_vertical"
         android:paddingRight="20dp"
-        android:text="@string/done" />
+        android:text="@string/vpp_done" />
 
 
 </FrameLayout>

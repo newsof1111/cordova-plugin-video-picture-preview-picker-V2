@@ -41,7 +41,11 @@ window.VideoPicturePreviewPickerV2.openPicker(
 		console.log(error);
 	}, {
 		limit_Select: 10,
-		Is_multiSelect: true
+		Is_multiSelect: true,
+    picture_selector:  true,
+    video_selector:  true,
+    display_video_time: true,
+    display_preview: true
 	}
 );
 
@@ -49,7 +53,11 @@ window.VideoPicturePreviewPickerV2.openPicker(
  options = 
     {
       limit_Select: 10,
-      Is_multiSelect: true
+      Is_multiSelect: true,
+      picture_selector:  true,
+      video_selector:  true,
+      display_video_time: true,
+      display_preview: true
     };
 window.VideoPicturePreviewPickerV2.openPicker
 (
@@ -59,16 +67,65 @@ window.VideoPicturePreviewPickerV2.openPicker
 );
 ```
 
+###Example3 - IONIC 2 + 
+```javascript
+import { Component } from '@angular/core';
+import { NavController ,Platform} from 'ionic-angular';
+
+// DONT FORGET THIS DECLARATION TO AVOID TYPESCRIPT ERROR 
+declare var VideoPicturePreviewPickerV2: any;
+
+@Component({
+  selector: 'page-home',
+  templateUrl: 'home.html'
+})
+export class HomePage {
+
+  constructor(public navCtrl: NavController,public platform: Platform) {}
+
+   uploadPicture()
+    {
+    
+          this.platform.ready().then(() =>
+                    {
+                    VideoPicturePreviewPickerV2.openPicker(
+                              function(results) {
+                                  console.log(results);
+
+                              }, function (error) {
+                                  console.log(error);
+                              }, {
+                                  limit_Select: 10,
+                                  Is_multiSelect: true,
+                                  picture_selector:  true,
+                                  video_selector:  true,
+                                  display_video_time: true,
+                                  display_preview: true
+                                });
+                   });
+     }
+
+
+}
+```
+
 ### Options
 if you want to select just ONE picture/video , just dont leave options in the function-call and it will consider the default options `openPicker(success, fail)` LIKE EXAMPLE 1
  ```javascript  
    options = 
     {
-     //max images or videos to be selected.
+        //max images or videos to be selected.
     	limit_Select: int, //defaults to 5
-
-    	//Is_multiSelect defines if it will select multiple images and video.
+    	  //Is_multiSelect defines if it will select multiple images and video.
     	Is_multiSelect: boolean //defaults to false
+        //picture_selector defines if you will select  images or not.
+      picture_selector: boolean //defaults to true
+        //video_selector defines if you will select  videos or not.
+      video_selector: boolean //defaults to true
+        //display_video_time defines if you  want to see the duration of videos's thumbnails or not.
+      display_video_time: boolean //defaults to true
+        //display_preview defines if you  want to see a preview when you select a media or not.
+      display_preview: boolean //defaults to true
     	
     };
 ```

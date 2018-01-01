@@ -40,83 +40,45 @@ public class ImageOrVideoItem {
 
 		
 	}
-
-	
 	public Bitmap getImage() {
 		return image;
 	}
-
-
 	public void setImage(Bitmap image) {
 		this.image = image;
 	}
-
-
 	public String getTitle() {
 		return title;
 	}
-
-
 	public void setTitle(String title) {
 		this.title = title;
 	}
-
-
 	public String getUrl() {
 		return url;
 	}
-
-
 	public void setUrl(String url) {
 		this.url = url;
 	}
-	
-
-
-	
-
 	public String getDuration() {
 		return Duration;
 	}
-
-
 	public void setDuration(String duration) {
 		Duration = duration;
 	}
-
-
-
-
-	public Long getDate_insert() {
-		return date_insert;
-	}
-
-
 	public void setDate_insert(Long date_insert) {
 		this.date_insert = date_insert;
 	}
-
-
-
 	public boolean isVideo() {
 		return video;
 	}
-
-
 	public void setVideo(boolean video) {
 		this.video = video;
 	}
-
-
 	public boolean isSelected() {
 		return selected;
 	}
-
-
 	public void setSelected(boolean selected) {
 		this.selected = selected;
 	}
-
 
 	//this function is used to sort the list of ImageOrVideoItems using insert_date
 	public static Comparator<ImageOrVideoItem> getCompByName() {
@@ -128,11 +90,9 @@ public class ImageOrVideoItem {
 		};
 		return comp;
 	}
-
 	public boolean isMultiSelectionState() {
 		return multiSelectionState;
 	}
-
 	public void setMultiSelectionState(boolean multiSelectionState) {
 		this.multiSelectionState = multiSelectionState;
 	}

@@ -14,7 +14,7 @@
         android:layout_width="fill_parent"
         android:layout_height="140px"
         android:layout_marginLeft="0dp"
-        android:background="@color/Snow"
+        android:background="@color/White"
         android:orientation="horizontal">
 
         <include layout="@layout/actionbar_discard_button" />
@@ -42,7 +42,7 @@
             android:layout_gravity="center_vertical"
             android:animateLayoutChanges="false"
             android:animationCache="false"
-            android:background="@drawable/backgrounddefault"
+            android:background="@color/White"
             android:gravity="center_vertical|center_horizontal"
             android:orientation="vertical">
 

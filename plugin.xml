@@ -28,7 +28,9 @@
 				<param name="android-package" value="com.sofienvppp2.VideoPicturePreviewPickerV2"/>
 			</feature>
 		</config-file>
-    <source-file src="android-support-v4.jar" target-dir="libs" />
+    <!-- <source-file src="android-support-v4.jar" target-dir="libs" /> -->
+        <framework src="com.android.support:support-v4:+" />
+         
 
 		<config-file target="AndroidManifest.xml" parent="/manifest/application">
 
@@ -56,12 +58,9 @@
 		<source-file src="src/android/Library/src/ImageOrVideoItem.java" target-dir="src/com/sofienvppp2"/>
 		<source-file src="src/android/Library/src/VideoPicturePickerActivity.java" target-dir="src/com/sofienvppp2"/>
 		<source-file src="src/android/Library/src/TouchImageView.java" target-dir="src/com/sofienvppp2"/>
-		<source-file src="src/android/Library/src/loadbackgroundPictureTask.java" target-dir="src/com/sofienvppp2"/>
 
 		
-		<source-file src="src/android/Library/res/values/videoPicturePreview_String.xml" target-dir="res/values"/>
 		<source-file src="src/android/Library/res/values/colors.xml" target-dir="res/values"/>
-
 		<source-file src="src/android/Library/res/layout/actionbar_discard_button.xml" target-dir="res/layout"/>
 		<source-file src="src/android/Library/res/layout/actionbar_done_button.xml" target-dir="res/layout"/>
 		<source-file src="src/android/Library/res/layout/video_picture_picker2_activity.xml" target-dir="res/layout"/>
@@ -70,17 +69,17 @@
 
 
 
-		<source-file src="src/android/Library/res/drawable/backgrounddefault.jpg" target-dir="res/drawable"/>
 		<source-file src="src/android/Library/res/drawable/fullscreen.png" target-dir="res/drawable"/>
-		<source-file src="src/android/Library/res/drawable/ic_action_discard_light.png" target-dir="res/drawable"/>
+		<source-file src="src/android/Library/res/drawable/ic_action_discard_light.png" target-dir="res/drawable"/>Ò
 		<source-file src="src/android/Library/res/drawable/ic_action_done_light.png" target-dir="res/drawable"/>
 		<source-file src="src/android/Library/res/drawable/inversefull.png" target-dir="res/drawable"/>
-		<source-file src="src/android/Library/res/drawable/preview3.png" target-dir="res/drawable"/>
 		<source-file src="src/android/Library/res/drawable/selected.png" target-dir="res/drawable"/>
 		<source-file src="src/android/Library/res/drawable/selected_not.png" target-dir="res/drawable"/>
 		
 
 		<source-file src="src/android/Library/res/values-de/videoPicturePreview_String.xml" target-dir="res/values-de"/>
 		<source-file src="src/android/Library/res/values-fr/videoPicturePreview_String.xml" target-dir="res/values-fr"/>
+		<source-file src="src/android/Library/res/values/videoPicturePreview_String.xml" target-dir="res/values"/>
+
 	</platform>
 </plugin>

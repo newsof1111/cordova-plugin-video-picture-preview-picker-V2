@@ -12,7 +12,7 @@
         android:layout_gravity="center"
         android:drawableLeft="@drawable/ic_action_discard_light"
         android:gravity="center_vertical"
-        android:text="@string/discard"
+        android:text="@string/vpp_discard"
         android:textColor="@color/Gray" />
 
 </FrameLayout>
